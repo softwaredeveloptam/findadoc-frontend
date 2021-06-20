@@ -152,7 +152,6 @@ export default {
     handleEditBtnPressed(item) {
       this.dialogEdit = true;
       this.selectedItem = item;
-      console.log("selected item: ", this.selectedItem);
       this.editItem(item);
     },
     handleCancelEditBtnPressed() {
@@ -160,7 +159,6 @@ export default {
       for (const key in this.pendingItem) {
         this.editedItem[key] = this.pendingItem[key];
       }
-      console.log("editedItem: ", this.editedItem);
     },
     handleDeleteBtnPressed(item) {
       this.selectedItem = item;
