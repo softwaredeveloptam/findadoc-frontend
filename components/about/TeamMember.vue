@@ -5,10 +5,10 @@
         <v-col sm="4">
           <v-avatar size="170" color="grey">
             <img
-            v-if="customPic"
-            :src="require(`~/assets/img/profile/${customPic}`)"
-            :alt="githubHandle"
-            style="object-fit: cover"
+              v-if="customPic"
+              :src="require(`~/assets/img/profile/${customPic}`)"
+              :alt="githubHandle"
+              style="object-fit: cover"
             />
             <img v-else :src="githubAvatarUrl" :alt="githubHandle" />
           </v-avatar>
@@ -17,15 +17,21 @@
           <div class="team-member-detail">
             <div class="team-member-detail-content">
               <div class="team-member-detail-info">
-              <h3>{{name}}</h3>
-              <h4>{{role}}</h4>
+                <h3>{{ name }}</h3>
+                <h4>{{ role }}</h4>
               </div>
               <div class="team-member-detail-actions">
                 <v-btn icon link color="white" :href="githubProfileUrl">
-                    <v-icon>mdi-github</v-icon>
-                  </v-btn>
-                  <v-btn v-if="twitterHandle" icon link color="white" :href="twitterProfileUrl">
-                    <v-icon>mdi-twitter</v-icon>
+                  <v-icon>mdi-github</v-icon>
+                </v-btn>
+                <v-btn
+                  v-if="twitterHandle"
+                  icon
+                  link
+                  color="white"
+                  :href="twitterProfileUrl"
+                >
+                  <v-icon>mdi-twitter</v-icon>
                 </v-btn>
               </div>
             </div>
@@ -72,12 +78,12 @@ export default {
 </script>
 <style>
 .team-member {
-  color:  white;
+  color: white;
   background: #324199;
 }
 
 .mobile .team-member {
-  padding-bottom:  30px;
+  padding-bottom: 30px;
 }
 
 .team-member h3 {
@@ -98,8 +104,10 @@ export default {
   transform: translateY(10%);
 }
 
-.team-member-detail-content h3, .team-member-detail-content h4, .team-member-detail-content div {
-  margin-bottom:  15px;
+.team-member-detail-content h3,
+.team-member-detail-content h4,
+.team-member-detail-content div {
+  margin-bottom: 15px;
 }
 
 .team-member-detail {
