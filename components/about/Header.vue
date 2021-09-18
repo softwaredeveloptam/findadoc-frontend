@@ -2,7 +2,7 @@
   <div>
     <div class="header-widget">
       <div class="header-widget-content">
-        <h1> {{ $t("about.header.headline") }} </h1>
+        <h1>{{ $t("about.header.headline") }}</h1>
       </div>
     </div>
     <AboutSvgWavyBump />
@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:  100%;
+  width: 100%;
   padding-top: 100px;
   padding-bottom: 50px;
 }

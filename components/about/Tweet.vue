@@ -45,12 +45,12 @@ export default {
   props: {
     tweet: {
       type: Object,
-      required: true
+      required: true,
     },
     turquoise: {
       type: Boolean,
-      required: false
-    }
+      required: false,
+    },
   },
   methods: {
     avatarColorClasses(turquoise) {
@@ -62,8 +62,8 @@ export default {
       }
 
       return classes.join(" ");
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -76,7 +76,8 @@ export default {
 .tweet-column {
   display: flex;
 }
-.turquoise .tweet-column, .turquoise .tweet-column .v-list-item__title {
-  color:  white;
+.turquoise .tweet-column,
+.turquoise .tweet-column .v-list-item__title {
+  color: white;
 }
 </style>

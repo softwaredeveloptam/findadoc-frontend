@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="mx-auto tweet-widget"
-    :class="getClasses(turquoise)"
-  >
+  <div class="mx-auto tweet-widget" :class="getClasses(turquoise)">
     <div class="tweet-wrapper">
       <div class="tweet-carousel">
         <v-carousel
@@ -21,7 +18,12 @@
           :index="activeTweetIndex"
         />
       </div>
-      <AboutSvgQuoteSymbol v-if="!turquoise" :width="200" :height="200" class="quote-symbol" />
+      <AboutSvgQuoteSymbol
+        v-if="!turquoise"
+        :width="200"
+        :height="200"
+        class="quote-symbol"
+      />
     </div>
   </div>
 </template>
@@ -30,12 +32,12 @@ export default {
   props: {
     tweets: {
       type: Array,
-      required: true
+      required: true,
     },
     turquoise: {
       type: Boolean,
-      required: false
-    }
+      required: false,
+    },
   },
   data() {
     return {
@@ -47,10 +49,10 @@ export default {
     getClasses(turquoise) {
       return {
         mobile: this.$vuetify.breakpoint.mobile,
-        turquoise: turquoise
-      }
-    }
-  }
+        turquoise: turquoise,
+      };
+    },
+  },
 };
 </script>
 <style>
@@ -58,13 +60,13 @@ export default {
   height: 600px;
 }
 .tweet-widget.turquoise {
-  background: #32B9D3;
+  background: #32b9d3;
 }
 
 .tweet-wrapper {
   width: 100%;
   height: 100%;
-  position:  relative;
+  position: relative;
 }
 
 .tweet-carousel {
