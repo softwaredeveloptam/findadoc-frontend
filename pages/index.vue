@@ -1,9 +1,7 @@
 <template>
   <div>
     <hero-section />
-    <div
-      class="mb-4"
-      :class="$vuetify.breakpoint.mobile ? 'mt-12' : 'mt-20'">
+    <div class="mb-4" :class="$vuetify.breakpoint.mobile ? 'mt-12' : 'mt-20'">
       <featured-news />
     </div>
     <div class="text-center">
